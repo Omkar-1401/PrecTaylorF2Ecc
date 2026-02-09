@@ -1,0 +1,2 @@
+# source this file to access LALSuite from Bourne or C shells
+expr "X$0" : '^X.*csh' >/dev/null && source /home/omkar/miniconda3/envs/lalsuite-dev/src/lalsuite/_inst/etc/lalsuite-user-env.csh || . /home/omkar/miniconda3/envs/lalsuite-dev/src/lalsuite/_inst/etc/lalsuite-user-env.sh

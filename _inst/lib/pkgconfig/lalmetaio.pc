@@ -1,0 +1,11 @@
+prefix=/home/omkar/miniconda3/envs/lalsuite-dev/src/lalsuite/_inst
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: LALMetaIO
+Description: LAL MetaIO Library Support
+Version: 4.0.6.1
+Requires.private: lal >= 7.7.0, libmetaio
+Libs: -L${libdir} -llalmetaio
+Cflags: -I${includedir}

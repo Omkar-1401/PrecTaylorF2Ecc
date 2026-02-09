@@ -1,0 +1,14 @@
+prefix=/home/omkar/miniconda3/envs/lalsuite-dev/src/lalsuite/_inst
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: LAL
+Description: LVK Algorithm Library
+Version: 7.7.0.1
+Requires.private: gsl, fftw3, fftw3f
+Libs.private: -L${libdir} -llal  -lpthread
+#Requires.private: gsl
+#Libs.private: -L${libdir} -llal mkl_rt  -lpthread
+Libs: -L${libdir} -llal
+Cflags: -I${includedir}  -pthread

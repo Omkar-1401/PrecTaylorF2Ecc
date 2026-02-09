@@ -1,0 +1,11 @@
+# source this file to access LALFrame
+set PYTHONPATH (echo "$PYTHONPATH" | /usr/bin/sed -e 's| |:|g;s|/home/omkar/miniconda3/envs/lalsuite-dev/src/lalsuite/_inst/lib/python3.13/site-packages:||g;')
+set PYTHONPATH (echo "/home/omkar/miniconda3/envs/lalsuite-dev/src/lalsuite/_inst/lib/python3.13/site-packages:$PYTHONPATH" | /usr/bin/sed -e 's| |:|g;s|:$||')
+set LALFRAME_PREFIX (echo "/home/omkar/miniconda3/envs/lalsuite-dev/src/lalsuite/_inst" | /usr/bin/sed -e 's| |:|g;')
+set MANPATH (echo "$MANPATH" | /usr/bin/sed -e 's| |:|g;s|/home/omkar/miniconda3/envs/lalsuite-dev/src/lalsuite/_inst/share/man:||g;')
+set MANPATH (echo "/home/omkar/miniconda3/envs/lalsuite-dev/src/lalsuite/_inst/share/man:$MANPATH" | /usr/bin/sed -e 's| |:|g;s|:$|:|')
+set PKG_CONFIG_PATH (echo "$PKG_CONFIG_PATH" | /usr/bin/sed -e 's| |:|g;s|/home/omkar/miniconda3/envs/lalsuite-dev/src/lalsuite/_inst/lib/pkgconfig:||g;')
+set PKG_CONFIG_PATH (echo "/home/omkar/miniconda3/envs/lalsuite-dev/src/lalsuite/_inst/lib/pkgconfig:$PKG_CONFIG_PATH" | /usr/bin/sed -e 's| |:|g;s|:$||')
+set LALFRAME_DATADIR (echo "/home/omkar/miniconda3/envs/lalsuite-dev/src/lalsuite/_inst/share/lalframe" | /usr/bin/sed -e 's| |:|g;')
+set PATH (echo "$PATH" | /usr/bin/sed -e 's| |:|g;s|/home/omkar/miniconda3/envs/lalsuite-dev/src/lalsuite/_inst/bin:||g;'| tr ':' '\n')
+set PATH (echo "/home/omkar/miniconda3/envs/lalsuite-dev/src/lalsuite/_inst/bin:$PATH" | /usr/bin/sed -e 's| |:|g;s|:$||'| tr ':' '\n')

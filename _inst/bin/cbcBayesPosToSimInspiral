@@ -1,0 +1,8 @@
+#!/home/omkar/miniconda3/envs/lalsuite-dev/bin/python
+import os, sys
+if 'PYTHONPATH' in os.environ:
+    os.environ['PYTHONPATH'] = '/home/omkar/miniconda3/envs/lalsuite-dev/src/lalsuite/_inst/lib/python3.13/site-packages:' + os.environ['PYTHONPATH']
+else:
+    os.environ['PYTHONPATH'] = '/home/omkar/miniconda3/envs/lalsuite-dev/src/lalsuite/_inst/lib/python3.13/site-packages'
+os.execv(sys.executable, [sys.executable, os.path.join(os.path.dirname(__file__), '../libexec/lalinference/cbcBayesPosToSimInspiral.py')] + sys.argv[1:])
+sys.exit(1)

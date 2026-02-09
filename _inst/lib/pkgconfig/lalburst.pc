@@ -1,0 +1,11 @@
+prefix=/home/omkar/miniconda3/envs/lalsuite-dev/src/lalsuite/_inst
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: LALBurst
+Description: LAL Burst Library Support
+Version: 2.0.7.1
+Requires.private: gsl, lal >= 7.7.0, libmetaio, lalmetaio >= 4.0.0, lalsimulation >= 6.2.0
+Libs: -L${libdir} -llalburst
+Cflags: -I${includedir}

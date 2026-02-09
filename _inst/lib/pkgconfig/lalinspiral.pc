@@ -1,0 +1,11 @@
+prefix=/home/omkar/miniconda3/envs/lalsuite-dev/src/lalsuite/_inst
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: LALInspiral
+Description: LAL Inspiral Library Support
+Version: 5.0.3.1
+Requires.private: gsl, lal >= 7.7.0, lalframe >= 3.0.0, libmetaio, lalmetaio >= 4.0.0, lalsimulation >= 6.2.0, lalburst >= 2.0.0
+Libs: -L${libdir} -llalinspiral
+Cflags: -I${includedir}

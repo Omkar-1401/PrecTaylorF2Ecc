@@ -1,0 +1,12 @@
+prefix=/home/omkar/miniconda3/envs/lalsuite-dev/src/lalsuite/_inst
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: LALSupport
+Description: LSC Algorithm Support Library (useful but non-conforming routines)
+Version: 7.7.0.1
+Requires.private: lal = 7.7.0.1
+Libs.private: -L${libdir} -llalsupport -lpthread -lz
+Libs: -L${libdir} -llalsupport
+Cflags: -I${includedir} -pthread 

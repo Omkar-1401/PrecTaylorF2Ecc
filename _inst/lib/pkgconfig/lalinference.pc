@@ -1,0 +1,11 @@
+prefix=/home/omkar/miniconda3/envs/lalsuite-dev/src/lalsuite/_inst
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: LALInference
+Description: LAL Inference Library Support
+Version: 4.1.9.1
+Requires.private: gsl, lal >= 7.7.0, lalframe >= 3.0.0, lalmetaio >= 4.0.0, lalsimulation >= 6.2.0, lalburst >= 2.0.0, lalinspiral >= 5.0.0
+Libs: -L${libdir} -llalinference
+Cflags: -I${includedir} 

@@ -1,0 +1,11 @@
+prefix=/home/omkar/miniconda3/envs/lalsuite-dev/src/lalsuite/_inst
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: LALSimulation
+Description: LAL Simulation Library Support
+Version: 6.2.0.1
+Requires.private: lal >= 7.7.0
+Libs: -L${libdir} -llalsimulation
+Cflags: -I${includedir} 
