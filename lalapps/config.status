@@ -1182,7 +1182,7 @@ S["CPP"]="/home/omkar/miniconda3/envs/lalsuite-dev/bin/x86_64-conda-linux-gnu-cp
 S["PACKAGE_NAME_NOLAL"]="Apps"
 S["PACKAGE_NAME_LCASE"]="lalapps"
 S["PACKAGE_NAME_UCASE"]="LALAPPS"
-S["configure_date"]="2026-02-09T15:40:08+0000"
+S["configure_date"]="2026-02-10T15:19:05+0000"
 S["ac_configure_args"]=" '--disable-option-checking' '--prefix=/home/omkar/miniconda3/envs/lalsuite-dev/src/lalsuite/_inst' '--enable-swig-python' '--disable-laldetchar' '-"\
 "-enable-mpi=yes' '--enable-hdf5' 'build_alias=x86_64-conda-linux-gnu' 'host_alias=x86_64-conda-linux-gnu' '--cache-file=/dev/null' '--srcdir=.' 'CC="\
 "/home/omkar/miniconda3/envs/lalsuite-dev/bin/x86_64-conda-linux-gnu-cc' 'CFLAGS=-march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protecto"\

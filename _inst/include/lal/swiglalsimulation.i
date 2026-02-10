@@ -3844,10 +3844,10 @@
 %newobject pow_9_of;
 %include <lal/SWIGLALSimulationAlpha.i>
 %include <lal/LALSimSphHarmSeries.h>
-SWIGLAL_CLEAR(RETURN_OWNED_BY_1ST_ARG(REAL8TimeSeries*,XLALSphHarmPolarTimeSeriesGetModePhase));
-SWIGLAL_CLEAR(RETURN_OWNED_BY_1ST_ARG(COMPLEX16FrequencySeries*,XLALSphHarmFrequencySeriesGetMode));
 SWIGLAL_CLEAR(RETURN_OWNED_BY_1ST_ARG(REAL8TimeSeries*,XLALSphHarmPolarTimeSeriesGetModeAmplitude));
+SWIGLAL_CLEAR(RETURN_OWNED_BY_1ST_ARG(REAL8TimeSeries*,XLALSphHarmPolarTimeSeriesGetModePhase));
 SWIGLAL_CLEAR(RETURN_OWNED_BY_1ST_ARG(COMPLEX16TimeSeries*,XLALSphHarmTimeSeriesGetMode));
+SWIGLAL_CLEAR(RETURN_OWNED_BY_1ST_ARG(COMPLEX16FrequencySeries*,XLALSphHarmFrequencySeriesGetMode));
 %include <lal/LALSimInspiralWaveformFlags.h>
 %include <lal/LALSimInspiralWaveformParams.h>
 %include <lal/LALSimInspiralTestGRParams.h>

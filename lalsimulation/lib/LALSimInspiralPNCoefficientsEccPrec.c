@@ -604,7 +604,7 @@ PrecEccentricityPhasing_F2(REAL8 v, REAL8 v0, REAL8 ecc, REAL8 m1, REAL8 m2, REA
       //ecc_phase_order[i] = SpinPhaseOrder*global_factor;
   }
   
-  REAL8 PrecIndCircTerm = PrecInducedCircular2PNPhasing_F2(m1, m2, chi1L, chi2L, chi1sq, chi2sq, chi1dotchi2) * pow(v0/v, 31.0/3.0) * v * v;
+  REAL8 PrecIndCircTerm = PrecInducedCircular2PNPhasing_F2(m1, m2, chi1L, chi2L, chi1sq, chi2sq, chi1dotchi2) * pow(v0/v, 31.0/3.0) * v_power[4];
   //fprintf(stdout, "======== DEBUG for eccentricity ================\n");
   //fprintf(stdout, "eccentricityPhasing_F2 phasing = %g, global_factor = %g, ecc_order = %d, ecc = %g\n", phasing, global_factor, ecc_order, ecc);
   return phasing*global_factor + PrecIndCircTerm;

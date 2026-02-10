@@ -1139,7 +1139,7 @@ S["CC"]="/home/omkar/miniconda3/envs/lalsuite-dev/bin/x86_64-conda-linux-gnu-cc"
 S["PACKAGE_NAME_NOLAL"]="Burst"
 S["PACKAGE_NAME_LCASE"]="lalburst"
 S["PACKAGE_NAME_UCASE"]="LALBURST"
-S["configure_date"]="2026-02-09T15:39:38+0000"
+S["configure_date"]="2026-02-10T15:18:34+0000"
 S["ac_configure_args"]=" '--disable-option-checking' '--prefix=/home/omkar/miniconda3/envs/lalsuite-dev/src/lalsuite/_inst' '--enable-swig-python' '--disable-laldetchar' '-"\
 "-enable-mpi=yes' '--enable-hdf5' 'build_alias=x86_64-conda-linux-gnu' 'host_alias=x86_64-conda-linux-gnu' '--cache-file=/dev/null' '--srcdir=.' 'LAL"\
 "_BIN_PATH=/home/omkar/miniconda3/envs/lalsuite-dev/src/lalsuite/lal/bin' 'LAL_DATA_PATH=$(abs_top_srcdir)/../lal/lib:$(abs_top_srcdir)/../lal/test' "\
