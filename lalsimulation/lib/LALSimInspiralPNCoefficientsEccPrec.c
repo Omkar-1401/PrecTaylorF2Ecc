@@ -582,28 +582,28 @@ PrecEccentricityPhasing_F2(REAL8 v, REAL8 v0, REAL8 ecc, REAL8 m1, REAL8 m2, REA
   global_factor = -2.355/1.462*ecc*ecc*pow(v0/v, 19.0/3.0);
   global_factor *= (3.0/128.0/eta);  // overall factor except v^-5 in phase term, this is Newtonian phase term
 
-  
-  if(ecc_order == -1) {
-    ecc_order = LAL_MAX_ECC_PN_ORDER;
+  if(ecc > 0) {
+	  if(ecc_order == -1) {
+	    ecc_order = LAL_MAX_ECC_PN_ORDER;
+	  }
+	  if(ecc_order > LAL_MAX_ECC_PN_ORDER) {
+	    return XLAL_REAL8_FAIL_NAN;
+	  }
+	
+	  REAL8 PrecPhaseOrder = 0;
+	  for(int i=0; i<=ecc_order; i++)
+	  {
+	    PrecPhaseOrder = 0;
+	    INT4 k = 0;
+	    for(int j=i; j>=0; j--)
+	    {
+	      k = i - j;
+	      PrecPhaseOrder += PrecEccPNCoeffs[i][j][k]*v_power[j]*v0_power[k];
+	    }
+	    phasing += PrecPhaseOrder;
+	      //ecc_phase_order[i] = SpinPhaseOrder*global_factor;
+	  }
   }
-  if(ecc_order > LAL_MAX_ECC_PN_ORDER) {
-    return XLAL_REAL8_FAIL_NAN;
-  }
-
-  REAL8 PrecPhaseOrder = 0;
-  for(int i=0; i<=ecc_order; i++)
-  {
-    PrecPhaseOrder = 0;
-    INT4 k = 0;
-    for(int j=i; j>=0; j--)
-    {
-      k = i - j;
-      PrecPhaseOrder += PrecEccPNCoeffs[i][j][k]*v_power[j]*v0_power[k];
-    }
-    phasing += PrecPhaseOrder;
-      //ecc_phase_order[i] = SpinPhaseOrder*global_factor;
-  }
-  
   REAL8 PrecIndCircTerm = PrecInducedCircular2PNPhasing_F2(m1, m2, chi1L, chi2L, chi1sq, chi2sq, chi1dotchi2) * pow(v0/v, 31.0/3.0) * v_power[4];
   //fprintf(stdout, "======== DEBUG for eccentricity ================\n");
   //fprintf(stdout, "eccentricityPhasing_F2 phasing = %g, global_factor = %g, ecc_order = %d, ecc = %g\n", phasing, global_factor, ecc_order, ecc);
