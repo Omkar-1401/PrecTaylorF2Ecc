@@ -327,7 +327,7 @@ int XLALSimInspiralPrecTaylorF2CoreEcc(
         }
 
         if (INCLUDE_PREC_ECC_PIECE){
-        if(eccentricity > 0 && (chi1sq > 0 || chi2sq > 0)) {
+        if(chi1sq > 0 || chi2sq > 0) {
           ref_phasing += PrecEccentricityPhasing_F2(vref, v_ecc_ref, eccentricity, m1, m2, chi1L, chi2L, chi1sq, chi2sq, chi1dotchi2, ecc_order);
         }
         }
@@ -383,7 +383,7 @@ int XLALSimInspiralPrecTaylorF2CoreEcc(
         }
     
         if(INCLUDE_PREC_ECC_PIECE){
-        if(eccentricity > 0 && (chi1sq > 0 || chi2sq > 0)) {
+        if(chi1sq > 0 || chi2sq > 0) {
           phasing += PrecEccentricityPhasing_F2(v, v_ecc_ref, eccentricity, m1, m2, chi1L, chi2L, chi1sq, chi2sq, chi1dotchi2, ecc_order);
         }
         }
