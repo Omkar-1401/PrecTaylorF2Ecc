@@ -40,17 +40,13 @@ documentation.
 
 ## Cloning the Repository
 
-We now utilize [Git LFS][gitlfs] for the managament of large files and
-as such `git-lfs` needs to be installed and configured to correctly
-clone this repository. After installing `git-lfs` it can be configured
-using:
+Clone this repository using:
 
-     $ git lfs install
+     $ git clone https://github.com/Omkar-1401/PrecTaylorF2Ecc
 
-This only needs to be done once for each machine you access the
-repository. It can then be cloned using:
+And checkout the PrecTaylorF2Ecc branch using:
 
-     $ git clone git@git.ligo.org:lscsoft/lalsuite.git
+     $ git checkout PrecTaylorF2Ecc
 
 ### LALSuite Extra Waveform Files
 
